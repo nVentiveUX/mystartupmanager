@@ -1,0 +1,8 @@
+*.pyc
+*.swp
+.directory
+.ropeproject/
+/.idea/
+/pkg-build/
+__pycache__/
+~*
