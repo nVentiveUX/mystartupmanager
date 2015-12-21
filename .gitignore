@@ -6,3 +6,4 @@
 /pkg-build/
 __pycache__/
 ~*
+*.sqlite3
