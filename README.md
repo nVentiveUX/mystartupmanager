@@ -1,21 +1,38 @@
-# About
+# MyStartupManager
 
-This is our secret project for MS-INNOV.
+Welcome to **MyStartupManager**, an open source web application to manage
+easily some parts of your startup company such as: leaves, employees,
+contracts...
 
-## Setup development environment
+## How to contribute ?
 
 These instructions are for Ubuntu LTS based distributions.
 
-### Install Python 3
+### Install Python
+
+Install **Python 3**:
 
 ```shell
-$ sudo apt-get install python3-dev python3-pip virtualenvwrapper
+# Ubuntu
+$ sudo apt-get install python3-dev python3-pip
+
+# Archlinux
+$ sudo pacman -S python python-pip
 ```
 
-### Install requirements
+Install **virtualenvwrapper**:
+
+```shell
+$ sudo pip install virtualenvwrapper
+$ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+```
+
+Your development environment is now ready.
+
+### Install project dependencies
 
 Open a terminal:
 
 ```shell
-$ mkvirtualenv -p /usr/bin/python3 -r requirements.txt msinnov
+$ mkvirtualenv -p /usr/bin/python3 -r requirements.txt mystartupmanager
 ```
