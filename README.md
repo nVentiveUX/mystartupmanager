@@ -1,5 +1,7 @@
 # MyStartupManager
 
+[![Build Status](https://travis-ci.org/nVentiveUX/mystartupmanager.svg)](https://travis-ci.org/nVentiveUX/mystartupmanager)
+
 Welcome to **MyStartupManager**, an open source web application to manage
 easily some parts of your startup company such as: leaves, employees,
 contracts...
