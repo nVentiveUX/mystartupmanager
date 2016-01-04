@@ -6,7 +6,7 @@ Welcome to **MyStartupManager**, an open source web application to manage
 easily some parts of your startup company such as: leaves, employees,
 contracts...
 
-**Contents**:
+## Contents
 
 * [How to contribute ?](https://github.com/nVentiveUX/mystartupmanager/wiki/How-to-contribute)
 * [Licensing](https://github.com/nVentiveUX/mystartupmanager/blob/master/LICENSE)
@@ -32,3 +32,5 @@ Test server is listening on http://127.0.0.1:8000.
 
 **Site administration** is accessible from http://127.0.0.1:8000/admin. Login using
 the administration account created earlier.
+
+**[Back to top](#contents)**
