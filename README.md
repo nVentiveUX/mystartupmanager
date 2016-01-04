@@ -4,66 +4,29 @@ Welcome to **MyStartupManager**, an open source web application to manage
 easily some parts of your startup company such as: leaves, employees,
 contracts...
 
-# How to contribute ?
+**Contents**:
 
-These instructions are for Ubuntu LTS based distributions.
+* [How to contribute ?](https://github.com/nVentiveUX/mystartupmanager/wiki/How-to-contribute)
+* [Licensing](https://github.com/nVentiveUX/mystartupmanager/blob/master/LICENSE)
 
-## Install Python
-
-Install **Python 3**:
-
-```shell
-# Ubuntu
-$ sudo apt-get install python3-dev python3-pip
-
-# Archlinux
-$ sudo pacman -S python python-pip
-```
-
-Install **virtualenvwrapper**:
+## Quick start
 
 ```shell
-$ sudo pip install virtualenvwrapper
-$ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+# Install project dependencies
+mkvirtualenv -p /usr/bin/python3 -r requirements.txt mystartupmanager
+
+# Run database migrations
+./manage.py migrate
+
+# Create administrator account and set password
+./manage.py createsuperuser --username admin --email admin@localhost --noinput
+./manage.py changepassword admin
+
+# Run the test server
+./manage.py runserver
 ```
 
-Your development environment is now ready.
-Enable virtual environment prior to any commands from now:
+Test server is listening on http://127.0.0.1:8000.
 
-```shell
-$ workon mystartupmanager
-```
-
-## Project configuration
-
-### Install project dependencies
-
-Open a terminal:
-
-```shell
-$ mkvirtualenv -p /usr/bin/python3 -r requirements.txt mystartupmanager
-```
-
-### Run database migrations
-
-```shell
-$ ./manage.py migrate
-```
-
-### Create administration account
-
-```shell
-$ ./manage.py createsuperuser --username admin --email admin@localhost --noinput
-$ ./manage.py changepassword admin
-<enter password>
-```
-
-### Run the test server
-
-```shell
-$ ./manage.py runserver
-$ xdg-open http://127.0.0.1:8000/
-```
-
-**Site administration** is accessible from relative path `/admin`. Login using
+**Site administration** is accessible from http://127.0.0.1:8000/admin. Login using
 the administration account created earlier.
