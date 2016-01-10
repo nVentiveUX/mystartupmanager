@@ -15,7 +15,7 @@ contracts...
 
 ```shell
 # Install project dependencies
-mkvirtualenv -p /usr/bin/python3 -r requirements.txt mystartupmanager
+mkvirtualenv -p /usr/bin/python3 -r requirements/develop.txt mystartupmanager
 
 # Run database migrations
 ./manage.py migrate
