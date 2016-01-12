@@ -8,7 +8,7 @@ contracts...
 
 ## Contents
 
-* [How to contribute ?](https://github.com/nVentiveUX/mystartupmanager/wiki/How-to-contribute)
+* [Developer Guide](https://github.com/nVentiveUX/mystartupmanager/blob/master/docs/developer_guide.md)
 * [Licensing](https://github.com/nVentiveUX/mystartupmanager/blob/master/LICENSE)
 
 ## Quick start
