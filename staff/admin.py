@@ -20,21 +20,39 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from django.contrib.auth.models import User
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
-from staff.models import Employee
+from staff.models import Employee, PhoneNumber
 
 
-class EmployeeInline(admin.StackedInline):
-    model = Employee
-    can_delete = False
-    verbose_name_plural = _('employee')
+class EmployeePhoneNumbersInline(admin.StackedInline):
+    model = PhoneNumber
+    extra = 0
 
 
-class UserAdmin(BaseUserAdmin):
-    inlines = (EmployeeInline, )
+@admin.register(Employee)
+class EmployeeProfileAdmin(admin.ModelAdmin):
+    inlines = (EmployeePhoneNumbersInline,)
+    list_display = ('full_name', 'username', 'gender', 'list_phones')
+    readonly_fields = ('user',)
 
-admin.site.unregister(User)
-admin.site.register(User, UserAdmin)
+    def username(self, obj):
+        return obj.user.username
+    username.short_description = _('username')
+
+    def full_name(self, obj):
+        return obj.user.get_full_name()
+    full_name.short_description = _('full name')
+
+    def list_phones(self, obj):
+        phones = ['%s' % p for p in obj.phones.all()]
+        return ', '.join(phones)
+    list_phones.short_description = _('phone numbers')
+
+    def has_add_permission(self, request, obj=None):
+        # Employee profiles are added when new users are created.
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        # Employee profile are deleted when the associated user is deleted.
+        return False
