@@ -40,11 +40,11 @@ Start a [PostgresSQL 9.4](https://hub.docker.com/_/postgres/) container using
 ```shell
 docker run \
     --name mystartupmanager_db \
-    -p 127.0.0.1:9000:5432 -e POSTGRES_PASSWORD=dbtest -d postgres:9.4
+    -p 127.0.0.1:9000:5432 -e POSTGRES_PASSWORD=dbpwd -d postgres:9.4
 ```
 
 The database server is accessible using `psql` utility with **postgres** user
-and **dbtest** for its password:
+and **dbpwd** for its password:
 
 ```shell
 psql -h localhost -p 9000 -U postgres
