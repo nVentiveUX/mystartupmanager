@@ -49,5 +49,3 @@ and **dbtest** for its password:
 ```shell
 psql -h localhost -p 9000 -U postgres
 ```
-
-**[Back to top](#contents)**
