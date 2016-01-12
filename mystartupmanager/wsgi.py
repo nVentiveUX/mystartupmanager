@@ -11,6 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
+# TODO: fix setings file to use when WSGI is used.
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mystartupmanager.settings")
 
 application = get_wsgi_application()
