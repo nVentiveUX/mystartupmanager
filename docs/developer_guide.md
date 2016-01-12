@@ -12,24 +12,24 @@ Install **Python 3**:
 
 ```shell
 # Ubuntu
-$ sudo apt-get install python3-dev python3-pip
+sudo apt-get install python3-dev python3-pip
 
 # Archlinux
-$ sudo pacman -S python python-pip
+sudo pacman -S python python-pip
 ```
 
 Install **virtualenvwrapper**:
 
 ```shell
-$ sudo pip install virtualenvwrapper
-$ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+sudo pip install virtualenvwrapper
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
 ```
 
 Your development environment is now ready.
 Enable virtual environment prior to any commands from now:
 
 ```shell
-$ workon mystartupmanager
+workon mystartupmanager
 ```
 
 ## Test database instance
@@ -48,4 +48,18 @@ and **dbpwd** for its password:
 
 ```shell
 psql -h localhost -p 9000 -U postgres
+```
+
+## Create development database
+
+Create development database:
+
+```shell
+createdb -h localhost -p 9000 -U postgres -E UTF8 -e mystartupmanager_dev
+```
+
+If you need to delete the database and create it again, drop it before:
+
+```shell
+dropdb -h localhost -p 9000 -U postgres -e mystartupmanager_dev
 ```
