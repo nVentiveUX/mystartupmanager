@@ -26,7 +26,7 @@ from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 
-from core.models import AbstractPhoneNumber
+from mystartupmanager.core.models import AbstractPhoneNumber
 
 
 class Employee(models.Model):

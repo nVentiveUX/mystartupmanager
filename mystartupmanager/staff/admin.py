@@ -22,7 +22,7 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 
-from staff.models import Employee, PhoneNumber
+from mystartupmanager.staff.models import Employee, PhoneNumber
 
 
 class EmployeePhoneNumbersInline(admin.StackedInline):
