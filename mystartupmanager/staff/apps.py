@@ -24,5 +24,5 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class StaffConfig(AppConfig):
-    name = 'staff'
+    name = 'mystartupmanager.staff'
     verbose_name = _('Staff Management')
