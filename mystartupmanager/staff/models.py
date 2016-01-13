@@ -19,12 +19,11 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+"""Staff database models"""
+
 from django.db import models
-from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
-from django.dispatch import receiver
-from django.db.models.signals import post_save
 
 from mystartupmanager.core.models import AbstractPhoneNumber
 
@@ -65,11 +64,3 @@ class PhoneNumber(AbstractPhoneNumber):
     employee = models.ForeignKey(Employee,
                                  on_delete=models.CASCADE,
                                  related_name='phones')
-
-
-# Define a signal to create the employee profile for new users.
-@receiver(post_save, sender=settings.AUTH_USER_MODEL)
-def create_employee_profile_for_new_user(sender, created, instance, **kwargs):
-    if created:
-        employee_profile = Employee(user=instance)
-        employee_profile.save()

@@ -19,14 +19,21 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-from django.apps import AppConfig
-from django.utils.translation import ugettext_lazy as _
+"""Staff model signals"""
+
+from django.conf import settings
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+
+from .models import Employee
 
 
-class StaffConfig(AppConfig):
-    name = 'mystartupmanager.staff'
-    verbose_name = _('Staff Management')
+__all__ = ['create_employee_profile_for_new_user']
 
-    def ready(self):
-        # Registering model signals
-        import mystartupmanager.staff.signals
+
+# Define a signal to create the employee profile for new users.
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_employee_profile_for_new_user(sender, created, instance, **kwargs):
+    if created:
+        employee_profile = Employee(user=instance)
+        employee_profile.save()
