@@ -30,6 +30,7 @@ class EmployeePhoneNumbersInline(admin.StackedInline):
     extra = 0
 
 
+# noinspection PyMethodMayBeStatic
 @admin.register(Employee)
 class EmployeeProfileAdmin(admin.ModelAdmin):
     inlines = (EmployeePhoneNumbersInline,)
