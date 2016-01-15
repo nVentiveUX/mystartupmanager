@@ -19,7 +19,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-"""Staff database models"""
+"""Database models"""
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
@@ -41,13 +41,15 @@ class Employee(models.Model):
 
     user = models.OneToOneField(User,
                                 on_delete=models.CASCADE,
-                                related_name=_('profile'))
+                                related_name=_('profile'),
+                                editable=False)
     gender = models.CharField(_('gender'),
                               max_length=1,
                               choices=GENDER_CHOICES,
                               blank=True,
                               null=True)
     job_title = models.CharField(_('job title'),
+                                 help_text=_('field_job_title_help'),
                                  max_length=255,
                                  default='')
 
