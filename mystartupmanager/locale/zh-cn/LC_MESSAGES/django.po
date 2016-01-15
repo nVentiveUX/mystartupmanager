@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mystartupmanager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-12 23:55+0100\n"
+"POT-Creation-Date: 2016-01-15 01:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: nVentiveUX\n"
 "Language-Team: Chinese\n"
@@ -46,43 +46,43 @@ msgstr ""
 msgid "phone number"
 msgstr ""
 
-#: mystartupmanager/core/models.py:36 mystartupmanager/staff/admin.py:50
+#: mystartupmanager/core/models.py:36 mystartupmanager/staff/admin.py:53
 msgid "phone numbers"
 msgstr ""
 
-#: mystartupmanager/settings/base.py:117
+#: mystartupmanager/settings/base.py:119
 msgid "English"
 msgstr ""
 
-#: mystartupmanager/settings/base.py:118
+#: mystartupmanager/settings/base.py:120
 msgid "French"
 msgstr ""
 
-#: mystartupmanager/settings/base.py:119
+#: mystartupmanager/settings/base.py:121
 msgid "Chinese"
 msgstr ""
 
-#: mystartupmanager/staff/admin.py:41
+#: mystartupmanager/staff/admin.py:44
 msgid "username"
 msgstr ""
 
-#: mystartupmanager/staff/admin.py:45
+#: mystartupmanager/staff/admin.py:48
 msgid "full name"
 msgstr ""
 
-#: mystartupmanager/staff/apps.py:28
+#: mystartupmanager/staff/apps.py:30
 msgid "Staff Management"
 msgstr ""
 
-#: mystartupmanager/staff/models.py:39
+#: mystartupmanager/staff/models.py:38
 msgid "Male"
 msgstr ""
 
-#: mystartupmanager/staff/models.py:40
+#: mystartupmanager/staff/models.py:39
 msgid "Female"
 msgstr ""
 
-#: mystartupmanager/staff/models.py:45
+#: mystartupmanager/staff/models.py:44
 msgid "profile"
 msgstr ""
 
@@ -94,10 +94,14 @@ msgstr ""
 msgid "job title"
 msgstr ""
 
-#: mystartupmanager/staff/models.py:56
-msgid "employee"
+#: mystartupmanager/staff/models.py:52
+msgid "field_job_title_help"
 msgstr ""
 
 #: mystartupmanager/staff/models.py:57
+msgid "employee"
+msgstr ""
+
+#: mystartupmanager/staff/models.py:58
 msgid "employees"
 msgstr ""

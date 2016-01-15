@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mystartupmanager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-12 02:15+0100\n"
+"POT-Creation-Date: 2016-01-15 01:10+0100\n"
 "PO-Revision-Date: 2016-01-12 01:19+0100\n"
 "Last-Translator: nVentiveUX\n"
 "Language-Team: English\n"
@@ -33,71 +33,75 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: core/models.py:29
+#: mystartupmanager/core/models.py:29
 msgid "phone_label_field"
 msgstr "phone label"
 
 #. Translators: this is the phone number here.
-#: core/models.py:31
+#: mystartupmanager/core/models.py:31
 msgid "phone_number_field"
 msgstr "phone number"
 
-#: core/models.py:35
+#: mystartupmanager/core/models.py:35
 msgid "phone number"
 msgstr "phone number"
 
-#: core/models.py:36 staff/admin.py:50
+#: mystartupmanager/core/models.py:36 mystartupmanager/staff/admin.py:53
 msgid "phone numbers"
 msgstr "phone numbers"
 
-#: mystartupmanager/settings.py:117
+#: mystartupmanager/settings/base.py:119
 msgid "English"
 msgstr "English"
 
-#: mystartupmanager/settings.py:118
+#: mystartupmanager/settings/base.py:120
 msgid "French"
 msgstr "French"
 
-#: mystartupmanager/settings.py:119
+#: mystartupmanager/settings/base.py:121
 msgid "Chinese"
 msgstr "Chinese"
 
-#: staff/admin.py:41
+#: mystartupmanager/staff/admin.py:44
 msgid "username"
 msgstr "user name"
 
-#: staff/admin.py:45
+#: mystartupmanager/staff/admin.py:48
 msgid "full name"
 msgstr "full name"
 
-#: staff/apps.py:28
+#: mystartupmanager/staff/apps.py:30
 msgid "Staff Management"
 msgstr "Staff Management"
 
-#: staff/models.py:39
+#: mystartupmanager/staff/models.py:38
 msgid "Male"
 msgstr "Male"
 
-#: staff/models.py:40
+#: mystartupmanager/staff/models.py:39
 msgid "Female"
 msgstr "Female"
 
-#: staff/models.py:45
+#: mystartupmanager/staff/models.py:44
 msgid "profile"
 msgstr "profile"
 
-#: staff/models.py:46
+#: mystartupmanager/staff/models.py:46
 msgid "gender"
 msgstr "gender"
 
-#: staff/models.py:51
+#: mystartupmanager/staff/models.py:51
 msgid "job title"
 msgstr "job title"
 
-#: staff/models.py:56
+#: mystartupmanager/staff/models.py:52
+msgid "field_job_title_help"
+msgstr "Eg. Developer, Marketing director, ..."
+
+#: mystartupmanager/staff/models.py:57
 msgid "employee"
 msgstr "employee"
 
-#: staff/models.py:57
+#: mystartupmanager/staff/models.py:58
 msgid "employees"
 msgstr "employees"
