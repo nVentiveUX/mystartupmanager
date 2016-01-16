@@ -20,11 +20,3 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 """Module views"""
-
-from django.views.generic import TemplateView
-
-
-class LandingPage(TemplateView):
-    """The landing page presenting the company."""
-    # TODO: allow to customize the landing template name.
-    template_name = 'core/landing.html'

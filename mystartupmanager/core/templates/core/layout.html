@@ -22,12 +22,15 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -->
 
-<html lang="en">
+<html>
 <head>
-  {% include 'core/_head.html' %}
+  <title>{% block page_title %}MyStartupManager{% endblock %}</title>
+  {% block metas %}{% include 'core/_metas.html' %}{% endblock %}
+  {% block stylesheets %}{% include 'core/_stylesheets.html' %}{% endblock %}
+  {% block relations %}{% include 'core/_relations.html' %}{% endblock %}
 </head>
 <body>
-{% include 'core/_content.html' %}
-{% include 'core/_load_scripts.html' %}
+{% block content %}{% endblock %}
+{% block scripts %}{% include 'core/_load_scripts.html' %}{% endblock %}
 </body>
 </html>
