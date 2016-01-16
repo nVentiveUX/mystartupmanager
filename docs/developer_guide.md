@@ -32,7 +32,7 @@ Enable virtual environment prior to any commands from now:
 workon mystartupmanager
 ```
 
-## Database backend
+## Database backend
 
 Here are some instructions on the supported database backend used in
 development.
