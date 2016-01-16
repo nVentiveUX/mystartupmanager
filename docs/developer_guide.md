@@ -32,7 +32,17 @@ Enable virtual environment prior to any commands from now:
 workon mystartupmanager
 ```
 
-## Test database instance
+## Database backend
+
+Here are some instructions on the supported database backend used in
+development.
+
+### SQLite
+
+SQLite is the default database backend, you have nothing more to do in order
+to make use of it.
+
+### PostgresSQL
 
 Start a [PostgresSQL 9.4](https://hub.docker.com/_/postgres/) container using
 [docker](https://www.docker.com/):
@@ -50,8 +60,6 @@ and **dbpwd** for its password:
 psql -h localhost -p 9000 -U postgres
 ```
 
-## Create development database
-
 Create development database:
 
 ```shell
@@ -62,4 +70,54 @@ If you need to delete the database and create it again, drop it before:
 
 ```shell
 dropdb -h localhost -p 9000 -U postgres -e mystartupmanager_dev
+```
+
+## Install project dependencies
+
+Across the whole documentation we will make use of **mystartupmanager** Python
+virtual environment. Here are the instructions to setup it:
+
+```shell
+mkvirtualenv -p /usr/bin/python3 -r requirements/develop.txt mystartupmanager
+```
+
+Activate the virtual environment with:
+
+```shell
+workon mystartupmanager
+```
+
+We assume that starting from here, the virtual environment is enabled wih the
+previous command.
+
+Time to time, you will need to update the dependencies, do it with:
+
+```shell
+pip install --upgrade -r requirements/develop.txt
+```
+
+## Populate database
+
+Initialize the database schema:
+
+```shell
+# Run database migrations
+./manage.py migrate
+```
+
+Create an **admin** account:
+
+```shell
+# Create administrator account and set password
+./manage.py createsuperuser --username admin --email admin@localhost --noinput
+./manage.py changepassword admin
+```
+
+## Test
+
+Run the test server with:
+
+```shell
+# Run the test server
+./manage.py runserver
 ```
