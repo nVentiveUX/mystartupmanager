@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 
     # Project apps
     'mystartupmanager.core',
+    'mystartupmanager.showcase',
     'mystartupmanager.staff',
 ]
 

@@ -23,9 +23,9 @@
 
 from django.conf.urls import url
 
-from .views import LandingPage
+from mystartupmanager.showcase.views import ShowcasePage
 
 
 urlpatterns = [
-    url(r'^$', LandingPage.as_view()),
+    url(r'^$', ShowcasePage.as_view()),
 ]
