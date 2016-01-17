@@ -8,5 +8,4 @@ __pycache__/
 ~*
 *.egg-info/
 dist/
-*.mo
 *.sqlite3
