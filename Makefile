@@ -33,3 +33,4 @@ dist-clean: clean
 	find $(CURDIR) -type f -name '*.sqlite3' -delete
 	find $(CURDIR) -type f -name '*.pyc' -delete
 	find $(CURDIR) -type d -name '__pycache__' -exec rm -rf {} \+;
+	find $(CURDIR) -type d -name '.ropeproject' -exec rm -rf {} \+;
