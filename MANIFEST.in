@@ -1,0 +1,6 @@
+include LICENSE MANIFEST.in README.md
+recursive-include docs *
+recursive-include mystartupmanager/core/static *
+recursive-include mystartupmanager/core/templates *
+recursive-include mystartupmanager/showcase/templates *
+recursive-include mystartupmanager/locale *
