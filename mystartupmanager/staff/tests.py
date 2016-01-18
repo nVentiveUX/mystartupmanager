@@ -22,5 +22,25 @@
 """Module testing"""
 
 from django.test import TestCase
+from django.contrib.auth.models import User
 
-# Create your tests here.
+from mystartupmanager.staff.models import Employee
+
+
+class EmployeeTestCase(TestCase):
+    def setUp(self):
+        new_user = User.objects.create(username='foo',
+                                       first_name='Foo',
+                                       last_name='BAR',
+                                       email='foo.bar@localhost',
+                                       password='foobar')
+        new_user.profile.gender = 'M'
+        new_user.profile.job_title = 'Tester'
+        new_user.profile.phones.create(label='Home',
+                                       number='+33111111111')
+        new_user.profile.save()
+
+    def test_employee_profile_exist(self):
+        """Test that newly created users have an employee profile."""
+        foobar_employee = User.objects.get(username='foo')
+        self.assertEqual(foobar_employee.profile.job_title, 'Tester')
