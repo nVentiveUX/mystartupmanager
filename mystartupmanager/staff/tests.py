@@ -24,8 +24,6 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 
-from mystartupmanager.staff.models import Employee
-
 
 class EmployeeTestCase(TestCase):
     def setUp(self):
