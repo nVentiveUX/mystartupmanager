@@ -23,5 +23,5 @@ language: python
 python:
   - "3.4"
   - "3.5"
-install: "pip install -q --upgrade -r requirements/base.txt"
+install: "pip install -q --upgrade -r requirements/develop.txt"
 script: "./manage.py test -v 2"
